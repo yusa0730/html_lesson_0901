@@ -22,6 +22,72 @@
 }
 
 /* --------------------------
+menu  担当：石沢
+----------------------------*/
+
+.menu_wrapper {
+  width: 100%;
+  background-color: white;
+}
+
+.menu_box {
+  width: 500px;
+  height: 1000px;
+  border-radius: 500px 0 0 500px;
+  background-color: #778899;
+  float: right;
+}
+
+.menu_title {
+  color: white;
+  position: relative;
+  top: 150px;
+  right: -275px;
+}
+
+.menu_logo {
+  position: relative;
+  top: 350px;
+  right: -40px;
+}
+
+.menu_nav {
+  position: relative;
+  top: 230px;
+  right: -230px;
+  width: 100px;
+  margin: 48px;
+}
+
+.menu_nav li a{
+  color: white;
+  display: inline-block;
+}
+
+.menu_fontawesome_box {
+  position: relative;
+  bottom: -360px;
+  right: -130px;
+}
+
+.menu_fontawesome {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu_fontawesome_listItem {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius:100%;
+}
+
+@media screen and ( min-width : 960px ){
+
+}
+
+/* --------------------------
 header_shadow  担当：石沢
 ----------------------------*/
 
@@ -109,7 +175,6 @@ top_main_about  担当：石沢
     margin: 96px 96px 0 96px;
     padding: 0;
   }
-
 
 }
 
