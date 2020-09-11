@@ -30,6 +30,14 @@
   padding-bottom: 56px;
 }
 
+.theme__color {
+  color: aqua;
+}
+
+.font__color {
+  color: #B0C4DE;
+}
+
 .clearfix::after {
   content: "";
   display: block;
@@ -297,6 +305,22 @@ top_main_about  担当：石沢
 
 .about__theme {
   display: block;
+  /* color: cyan; */
+  font-size: 20px;
+}
+
+.about__theme::before {
+  content:"----------";
+  text-decoration: line-through ;
+  margin-right: 1em ;
+  color: darkgray;
+}
+
+.about__theme::after {
+  content:"----------";
+  text-decoration: line-through ;
+  margin-left: 1em;
+  color: darkgray;
 }
 
 .about_logo_box {
@@ -312,6 +336,7 @@ top_main_about  担当：石沢
 
 .about_text_box {
   padding: 40px 0 56px 0;
+  text-align: justify;
 }
 
 @media screen and ( min-width : 960px ){
@@ -347,6 +372,7 @@ top_main_about  担当：石沢
 
   .about__theme {
     display: none;
+    font-size: 30px;
   }
 
   .about_logo_box {
@@ -391,6 +417,7 @@ profile  担当：石沢
 
 .profile__content__box p{
   scroll-padding-bottom: 40px;
+  font-size: 2px;
 }
 
 .profile__img__box {
@@ -486,6 +513,24 @@ service  担当：石沢
   margin: 0 auto;
 }
 
+.service__theme {
+  font-size: 20px;
+}
+
+.service__theme::before {
+  content:"---------";
+  text-decoration: line-through ;
+  margin-right: 1em ;
+  color: darkgray;
+}
+
+.service__theme::after {
+  content:"---------";
+  text-decoration: line-through ;
+  margin-left: 1em ;
+  color: darkgray;
+}
+
 
 @media screen and ( min-width : 960px ){
   .service__container__standInArow {
@@ -504,5 +549,9 @@ service  担当：石沢
 
   .service__img__box {
     padding: 56px 0;
+  }
+
+  .service__content {
+    text-align: left;
   }
 }
