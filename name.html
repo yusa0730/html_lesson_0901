@@ -22,10 +22,8 @@
 -->
 <body>
     <div class="CONTAINER GUIDE">
-
-
         <section class="SECTION">
-            <div class="SECTION__WRAPPER">
+            <div class="SECTION__WRAPPER" id="js-section">
             <!-- ↓この中にコードを記述↓ -->
                 <section class="header_shadow">
                     <div class="header_shadow_logo_box">
@@ -33,13 +31,46 @@
                     </div>
                     <div class="top_main_menuBtn_box">
                         <button class="top_main_menuBtn">
-                            <img src="svg/menu_bg.svg" class="top_main_menuBtn_img">
+                            <img src="svg/menu_bg.svg" class="top_main_menuBtn_img" id="js-hamburger">
+                            <div class="hamburger">
+                                <span class="hamburger__line hamburger__line--1"></span>
+                                <span class="hamburger__line hamburger__line--2"></span>
+                                <span class="hamburger__line hamburger__line--3"></span>
+                            </div>
+                            <div class="black-bg" id="js-black-bg"></div>
                         </button>
                     </div>
                 </section>
+                <section class="menu">
+                    <div class="menu_wrapper black-bg">
+                        <div class="menu_box">
+                            <div class="menu_exit" id="js-menu_exit">
+                                <span class="hamburger__exit__line hamburger__line--1"></span>
+                                <span class="hamburger__exit__line hamburger__line--3"></span>
+                            </div>
+                            <h1 class="menu_title">Menu</h1>
+                            <div class="menu_logo">
+                                <h1><img src="svg/circloop_logo_white.svg" alt="企業ロゴ" class="top_main_logo"></h1>
+                            </div>
+                            <ul class="menu_nav">
+                                <li><a href="">About</a><p>></p></li>
+                                <li><a href="">About</a><p>></p></li>
+                                <li><a href="">About</a><p>></p></li>
+                                <li><a href="">About</a><p>></p></li>
+                                <li><a href="">About</a><p>></p></li>
+                                <li><a href="">About</a><p>></p></li>
+                                <li><a href="">About</a><p>></p></li>
+                            </ul>
+                            <ul class="menu_fontawesome_box">
+                                <li class="menu_fontawesome_listItem"><img src="svg/twitter.svg"></li>
+                                <li class="menu_fontawesome_listItem"><img src="svg/facebook.svg"></li>
+                                <li class="menu_fontawesome_listItem"><img src="svg/mail.svg"></li>
+                            </ul>
+                        </div>
+                      </div>
+                </section>
                 <section class="top_main_about">
                     <div class="top_main">
-                        <!-- <p>気持ちや思いを届けるそのお手伝いをしたい</p> -->
                         <svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="52 0 375 548">
                             <defs>
                                 <clipPath id="clip">
@@ -48,8 +79,11 @@
                             </defs>
                             <image xlink:href="img/main_image.jpg" clip-path="url(#clip)">
                         </svg>
+                        <h2>気持ちや思いを届ける</h2>
+                        <h2>そのお手伝いをしたい</h2>
                     </div>
                     <div class="about">
+                        <h1 class="about__theme">-------- About --------</h1>
                         <div class="about_logo_box">
                             <h1><img src="svg/logo.svg"></h1>
                             <p>- サークループ -</p>
@@ -59,16 +93,23 @@
                         </div>
                         <div class="button_box">
                             <button class="Button">
-                                <p>More</p>
-                                <p>></p>
+                                <p class="Button__theme">More</p>
+                                <p class="Button__direction">></p>
                             </button>
                         </div>
                     </div>
                 </section>
                 <section class="top_profile">
-                    <div class="profile__pasonal__wrapper">
+                    <div class="profile__parsonal__wrapper">
                         <div class="profile__img__box">
-                            <img src="img/profile.jpg">
+                            <svg class="profile__svg__box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 548">
+                                <defs>
+                                    <clipPath id="clip">
+                                        <path class="cls-1" d="M259,480.77a92.52,92.52,0,0,1,9.11-2.41C387.42,464.43,480,363,480,240,480,107.45,372.55,0,240,0S0,107.45,0,240C0,363.37,93.09,465,212.85,478.47c12.36,2,21.39,8.87,15.49,21.9-5.18,9.52-10.13,20.11-10.13,25.84a21.79,21.79,0,0,0,43.58,0c0-5.73-5-16.32-10.14-25.84C247.17,490.46,251.32,484.12,259,480.77Z"/>
+                                    </clipPath>
+                                </defs>
+                                <image class="profile__img" xlink:href="img/profile.jpg" clip-path="url(#clip)">
+                            </svg>
                         </div>
                         <div class="profile__content__box">
                             <div class="profile__logo__box">
@@ -76,7 +117,7 @@
                                 <p>プロフィール</p>
                             </div>
                             <div class="profile__name__box">
-                                <h1>水澤 勇気</h1>
+                                <h1>水澤 佑材</h1>
                                 <p>Mizusawa Yuki</p>
                             </div>
                         </div>
@@ -87,51 +128,48 @@
                         </div>
                         <div class="button_box">
                             <button class="Button">
-                                <p>Profile</p>
-                                <p>></p>
+                                <p class="Button__theme">Profile</p>
+                                <p class="Button__direction">></p>
                             </button>
                         </div>
                     </div>
                 </section>
-                <section class="top_service">
+                <section class="service">
                     <h1>-------- Service --------</h1>
-                    <div class="furniture__container__standInArow">
-                        <div class="furniture__card">
+                    <div class="service__container__standInArow">
+                        <div class="service__card">
                             <h5>LP制作</h5>
-                            <div class="furniture__img__box">
+                            <div class="service__img__box">
                                 <img src="svg/service_lp.svg">
                             </div>
-                            <div class="furniture__content">
+                            <div class="service__content">
                                 <p>ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。</p>
                             </div>
                         </div>
-                        <div class="furniture__card">
+                        <div class="service__card">
                             <h5>LP制作</h5>
-                            <div class="furniture__img__box">
+                            <div class="service__img__box">
                                 <img src="svg/service_wordpress.svg">
                             </div>
-                            <div class="furniture__content">
+                            <div class="service__content">
                                 <p>ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。</p>
                             </div>
                         </div>
-                        <div class="furniture__card">
+                        <div class="service__card">
                             <h5>LP制作</h5>
-                            <div class="furniture__img__box">
+                            <div class="service__img__box">
                                 <img src="svg/service_management.svg">
                             </div>
-                            <div class="furniture__content">
+                            <div class="service__content">
                                 <p>ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。ここにLPについての概要文が入ります。</p>
                             </div>
                         </div>
                     </div>
                 </section>
-
-
             <!-- ↑この中にコードを記述↑ -->
             </div>
         </section>
-
-
     </div>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

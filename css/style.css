@@ -4,10 +4,25 @@
 ----------------------------*/
 
 .Button {
-  width: 40%;
+  width: 220px;
+  height: 45px;
   border-radius: 40px;
   border: none;
   background-color: steelblue;
+}
+
+.Button p {
+  display: inline-block;
+  color: white;
+}
+
+.Button__theme {
+  padding-left: 30px;
+}
+
+.Button__direction {
+  float: right;
+  padding-right: 24px;
 }
 
 .button_box {
@@ -31,9 +46,9 @@ menu  担当：石沢
 }
 
 .menu_box {
-  width: 500px;
-  height: 1000px;
-  border-radius: 500px 0 0 500px;
+  width: 360px;
+  height: 660px;
+  border-radius: 320px 0 0 320px;
   background-color: #778899;
   float: right;
 }
@@ -41,50 +56,95 @@ menu  担当：石沢
 .menu_title {
   color: white;
   position: relative;
-  top: 150px;
-  right: -275px;
+  top: 100px;
+  right: -235px;
 }
 
 .menu_logo {
   position: relative;
-  top: 350px;
-  right: -40px;
+  top: 250px;
+  right: 0px;
 }
 
 .menu_nav {
   position: relative;
-  top: 230px;
-  right: -230px;
+  top: 35px;
+  right: -160px;
   width: 100px;
   margin: 48px;
 }
 
-.menu_nav li a{
+.menu_nav li {
+  border-bottom:solid 1px white;
+  padding: 10px 10px;
+}
+
+.menu_nav a{
   color: white;
   display: inline-block;
+  text-decoration-line: none;
+  /* border-bottom:solid 1px white; */
+}
+
+.menu_nav p {
+  display: inline-block;
+  float: right;
+  color: white;
+  /* border-bottom:solid 1px white; */
 }
 
 .menu_fontawesome_box {
   position: relative;
-  bottom: -360px;
-  right: -130px;
-}
-
-.menu_fontawesome {
+  right: -45px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding-top: 32px;
 }
 
 .menu_fontawesome_listItem {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   border-radius:100%;
 }
 
-@media screen and ( min-width : 960px ){
+@media screen and ( min-width : 960px ){  
+  .menu_box {
+    width: 500px;
+    height: 900px;
+    border-radius: 500px 0 0 500px;
+    background-color: #778899;
+    float: right;
+  }
 
+  .menu_title {
+    top: 110px;
+    right: -285px;
+    font-size: xxx-large;
+  }
+
+  .menu_nav {
+    top: 70px;
+    right: -255px;
+    width: 130px;
+    margin: 40px;
+  }
+
+  .menu_logo {
+    top: 290px;
+    right: 0px;
+  }
+
+  .menu_fontawesome_box {
+    right: -45px;
+    padding-top: 130px;
+  }
+
+  .menu_fontawesome_box {
+    right: -45px;
+    padding-top: 100px;
+  }
 }
 
 /* --------------------------
@@ -99,6 +159,7 @@ header_shadow  担当：石沢
   width: 100px;
   height: 100px;
   float: left;
+  margin-left: 24px;
 }
 
 .top_main_menuBtn {
@@ -106,15 +167,99 @@ header_shadow  担当：石沢
   border: none;
   display: block;
   float: right;
-
+  position: relative;
+  cursor: pointer;
+  padding-top: 5px;
 }
 
 .top_main_menuBtn_img {
   width: 50%;
 }
 
-@media screen and ( min-width : 960px ){
+.hamburger {
+  position: absolute;
+  top: 19px;
+  right: 84px;
+  cursor: pointer;
+}
 
+.hamburger__line {
+  position: absolute;
+  left: 9px;
+  width: 23px;
+  height: 1px;
+  background-color: white;
+  transition: all .6s;
+}
+
+.hamburger__exit__line {
+  position: absolute;
+  left: 9px;
+  width: 40px;
+  height: 1px;
+  background-color: white;
+  transition: all .6s;
+}
+
+.hamburger__line--1 {
+  top: -1px;
+}
+
+.hamburger__line--2 {
+  top: 11px;
+}
+
+.hamburger__line--3 {
+  top: 24px;
+}
+
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  cursor: pointer;
+}
+
+.nav-open .black-bg {
+  opacity: .8;
+  visibility: visible;
+}
+
+.nav-open .hamburger__line--1 {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.nav-open .hamburger__line--2 {
+  width: 0;
+  left: 50%;
+}
+
+.nav-open .hamburger__line--3 {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+.menu_exit {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media screen and ( min-width : 960px ){
+  .black-bg {
+    background-color: white;   
+  }
 }
 
 /* --------------------------
@@ -126,6 +271,10 @@ top_main_about  担当：石沢
 
 .top_main {
   width: 100%;
+}
+
+.top_main h2 {
+  display: none;
 }
 
 .box {
@@ -141,21 +290,24 @@ top_main_about  担当：石沢
   width: 100%;
 }
 
-.top_main p {
-  writing-mode: vertical-rl;
-}
-
 .about {
   padding: 40px 32px 0 32px;
+  text-align: center;
+}
+
+.about__theme {
+  display: block;
 }
 
 .about_logo_box {
   width: 30%;
   text-align: center;
+  padding-top: 80px;
   margin: 0 auto;
 }
 .about_logo_box p {
   margin-top: 24px;
+  font-size: 10px;
 }
 
 .about_text_box {
@@ -171,11 +323,47 @@ top_main_about  担当：石沢
     margin-left: 96px;
   }
 
+  .top_main h2 {
+    display: block;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 190px;
+    left: 690px;
+    letter-spacing: 15px;
+  }
+
+  .top_main h2:last-child {
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 250px;
+    left: 650px;
+    letter-spacing: 15px;
+  }
+
   .about {
     margin: 96px 96px 0 96px;
     padding: 0;
   }
 
+  .about__theme {
+    display: none;
+  }
+
+  .about_logo_box {
+    width: 35%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .about_logo_box p {
+    margin-top: 0;
+  }
+
+  .about_text_box {
+    width: 350px;
+    padding: 80px 0 80px 0;
+    margin: 0 auto;
+  }
 }
 
 /* --------------------------
@@ -185,13 +373,16 @@ profile  担当：石沢
   padding: 80px 32px;
 }
 
-.profile__pasonal__wrapper {
+.profile__parsonal__wrapper {
   display: flex;
   padding-bottom: 56px;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile__content__box {
   padding-left: 40px;
+  text-align: center;
 }
 
 .profile__logo__box {
@@ -202,15 +393,23 @@ profile  担当：石沢
   scroll-padding-bottom: 40px;
 }
 
-.profile__img__box img{
-  width: 160px;
-  height: 160px;
+.profile__img__box {
+  height: 548px;
+}
+
+.profile__svg__box {
+  width: 175px;
+  height: 551px;
+}
+
+.profile__img {
+  width: 547px;
+  height: 550px;
 }
 
 .profile__career__wrapper .career__text {
   display: none;
 }
-
 
 @media screen and ( min-width : 960px ){
   .top_profile {
@@ -238,14 +437,28 @@ profile  担当：石沢
     display: block;
   }
 
-  .profile__img__box img {
-    width: 240px;
+  .profile__img__box {
     height: 240px;
+    width: 240px;
+  }
+
+  .profile__svg__box {
+    width: 100%;
+    height: 240px;
+  }
+
+  .profile__img {
+    width: 480px;
+    height: auto;
   }
 
   .profile__career__wrapper .button_box {
     padding-bottom: 0;
     padding-top: 56px;
+  }
+
+  .profile__content__box {
+    width: 100px;
   }
 }
 
@@ -253,20 +466,20 @@ profile  担当：石沢
 service  担当：石沢
 ----------------------------*/
 
-.top_service {
+.service {
   text-align: center;
   padding: 40px 32px 0 32px;
 }
 
-.furniture__container__standInArow {
+.service__container__standInArow {
   padding-top: 80px;
 }
 
-.furniture__card {
+.service__card {
   padding-bottom: 80px;
 }
 
-.furniture__img__box {
+.service__img__box {
   width: 160px;
   height: 160px;
   padding: 40px 0;
@@ -275,21 +488,21 @@ service  担当：石沢
 
 
 @media screen and ( min-width : 960px ){
-  .furniture__container__standInArow {
+  .service__container__standInArow {
     display: flex;
     padding-top: 120px;
   }
 
-  .furniture__card {
+  .service__card {
     padding-bottom: 0;
     margin-right: 96px;
   }
 
-  .furniture__card:nth-child(3) {
+  .service__card:nth-child(3) {
     margin-right: 0;
   }
 
-  .furniture__img__box {
+  .service__img__box {
     padding: 56px 0;
   }
 }
