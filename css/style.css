@@ -285,7 +285,7 @@ top_main_about  担当：石沢
   display: none;
 }
 
-.box {
+.top_main_svg_box {
   width: 100%;
   height: 548px;
 }
@@ -519,14 +519,14 @@ service  担当：石沢
 
 .service__theme::before {
   content:"---------";
-  text-decoration: line-through ;
+  text-decoration: line-through;
   margin-right: 1em ;
   color: darkgray;
 }
 
 .service__theme::after {
   content:"---------";
-  text-decoration: line-through ;
+  text-decoration: line-through;
   margin-left: 1em ;
   color: darkgray;
 }
